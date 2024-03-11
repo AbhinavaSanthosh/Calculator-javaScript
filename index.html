@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+</head>
+<style>
+  body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100hv;
+    width: 100vw;
+    background-image: url("bg.jpg");
+    background-size:cover ;
+    background-repeat: no-repeat;
+  }
+  #calculator{
+    font-family: Arial, sans-serif;
+    background-color: transparent;
+    border-radius: 15px;
+    max-width: 350px;
+    overflow: hidden;
+    box-shadow: 12px 10px 0.1;
+    margin-top: 170px;
+    border: 1px solid;
+    box-shadow: 10px 10px 5px gray;
+    margin-left: 180px;
+  }
+  #display{
+    width: 100%;
+    padding: 20px;
+    font-size: 2rem;
+    text-align: left;
+    border: none;
+    background-color: black;
+    color: white;
+  }
+  #keys{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    padding: 25px;
+  }
+  button{
+    font-family: monospace;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    border: none;
+    /* background-color: hsl(0, 0%, 30%); */
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  button:hover{
+    background-color: hsl(0, 0%, 40%);
+  }
+  button:active{
+    background-color: hsl(0, 0%, 50%);
+  }
+  .operator-btn{
+    background-color: hsl(35, 100%, 55%);
+  }
+  .operator-btn:hover{
+    background-color: hsl(35, 100%, 65%);
+  }
+  .operator-btn:active{
+    background-color: hsl(35, 100%, 75%);
+  }
+  h1{
+    font-family: poppins,sans-serif;
+    color: rgb(212, 244, 251);
+    font: monospace;
+    font-size: 40px;
+    margin-top: 80px;
+    margin-left: 50px;
+  }
+</style>
+<body>
+  <h1>calculator:</h1>
+  <div id="calculator">
+    
+    <input type="text" id="display" placeholder="Calculation">
+    <div id="keys">
+      
+      <button onclick="clearDisplay()" class="operator-btn">AC</button>
+      <button onclick="appendToDisplay('%')" class="operator-btn">%</button>
+      <button onclick="backDisplay()" class="operator-btn"><</button>
+      <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
+      <button onclick="appendToDisplay('7')">7</button>
+      <button onclick="appendToDisplay('8')">8</button>
+      <button onclick="appendToDisplay('9')">9</button>
+      <button onclick="appendToDisplay('-')" class="operator-btn">-</button>
+      <button onclick="appendToDisplay('4')">4</button>
+      <button onclick="appendToDisplay('5')">5</button>
+      <button onclick="appendToDisplay('6')">6</button>
+      <button onclick="appendToDisplay('*')" class="operator-btn">*</button>
+      <button onclick="appendToDisplay('1')">1</button>
+      <button onclick="appendToDisplay('2')">2</button>
+      <button onclick="appendToDisplay('3')">3</button>
+      <button onclick="appendToDisplay('/')" class="operator-btn">/</button>
+      <button onclick="appendToDisplay('0')">00</button>
+      <button onclick="appendToDisplay('0')">0</button>
+      <button onclick="appendToDisplay('.')">.</button>
+      <button onclick="calculate()" class="operator-btn">=</button>
+
+      
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
