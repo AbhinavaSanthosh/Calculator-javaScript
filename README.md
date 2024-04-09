@@ -1,1 +1,1 @@
-# calculator-js
+# calculator using basic java Script.
